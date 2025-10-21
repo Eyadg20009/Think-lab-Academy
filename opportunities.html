@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TLA - Opportunities</title>
+  <link rel="stylesheet" href="opportunities.css" />
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <div class="header-inner">
+        <a href="index.html"><img src="Logo.png" alt="ThinkLab Academy Logo" class="logo"></a>
+        <h1>Opportunities</h1>
+      </div>
+    </header>
+
+    <section class="materials-section">
+      <div class="container">
+
+        <!-- compact inline filters row: Subject (wider) | Type | Availability -->
+        <div class="filters-row" aria-label="Filters">
+          <div class="filter-group filter-subject">
+            <label for="filter-subject" class="filter-label">Subject</label>
+            <select id="filter-subject" class="filter-select" aria-label="Filter by Subject"></select>
+          </div>
+
+          <div class="filter-group filter-type">
+            <label for="filter-type" class="filter-label">Type</label>
+            <select id="filter-type" class="filter-select" aria-label="Filter by Type"></select>
+          </div>
+
+          <div class="filter-group filter-availability">
+            <label for="filter-availability" class="filter-label">Availability</label>
+            <select id="filter-availability" class="filter-select" aria-label="Filter by Availability"></select>
+          </div>
+
+          <!-- Individual counts for each type -->
+          <div class="counts-inline" aria-hidden="true">
+            <div class="count-badge">Competitions: <span id="count-competition">0/0</span></div>
+            <div class="count-badge">Programs: <span id="count-program">0/0</span></div>
+            <div class="count-badge">Sessions: <span id="count-session">0/0</span></div>
+          </div>
+        </div>
+
+        <!-- search input -->
+        <div class="search-row">
+          <input id="search-input" type="search" placeholder="Search by title or description" class="search-input" />
+        </div>
+
+        <div id="materials-list">
+          <details class="material" data-type="competition" data-category="stem" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🧪 Intel ISEF (Regeneron ISEF)</span>
+              <span class="summary-meta"> — stem • science</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>World's largest pre-college science & engineering fair for student research finalists.</p>
+              <p><a href="https://www.societyforscience.org/isef/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🔬 EISTF (Egypt Int'l Science & Technology Fair)</span>
+              <span class="summary-meta"> — stem • science</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Major Egyptian international science fair for students to present research.</p>
+              <p><a href="https://eistf.eg-ase.org/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🚀 Blastoff (Egypt National Science & Eng. Fair)</span>
+              <span class="summary-meta"> — stem • science</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Egyptian national student science & engineering fair (IdeasGym).</p>
+              <p><a href="https://ideasgym.com/pages/blastoff-science-eng-fair" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="entrepreneurship" data-subject="innovation" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🌍 Innovation Prize for Africa</span>
+              <span class="summary-meta"> — entrepreneurship • innovation</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Pan-African prize rewarding scalable innovations solving African development problems.</p>
+              <p><a href="https://innovationprizeforafrica.org" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="engineering" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🎓 Geneva International Exhibition of Inventions</span>
+              <span class="summary-meta"> — stem • engineering</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Prestigious international inventions fair in Geneva with awards and licensing opportunities.</p>
+              <p><a href="https://www.inventions-geneva.ch/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="technology" data-subject="cs" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">👩‍💻 Technovation (Technovation Girls / Challenge)</span>
+              <span class="summary-meta"> — technology • cs</span>
+            </summary>
+            <div class="mat-details">
+              <p>Global program where girls build apps/AI solutions and pitch business plans.</p>
+              <p><a href="https://www.technovation.org/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="physics" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🛰️ NASA International Space Apps Challenge</span>
+              <span class="summary-meta"> — stem • physics</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>48-hour global hackathon using NASA open data to solve space/Earth challenges.</p>
+              <p><a href="https://www.spaceappschallenge.org/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="stem" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🔍 Junior Academy (NY Academy of Sciences)</span>
+              <span class="summary-meta"> — stem • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Project-based mentorship program linking students with STEM experts to solve problems.</p>
+              <p><a href="https://www.nyas.org/programs/junior-academy/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🎯 Vanda Science Competition</span>
+              <span class="summary-meta"> — stem • science</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>International online science challenge testing scientific knowledge and problem solving.</p>
+              <p><a href="https://vanda.science" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="academics" data-subject="math" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🧮 IYMC (International Youth Math Challenge)</span>
+              <span class="summary-meta"> — academics • math</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Online math contest for students focused on problem solving and mathematical reasoning.</p>
+              <p><a href="https://iymc.info" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="biology" data-subject="biology" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🧠 Brain Bee (International Brain Bee)</span>
+              <span class="summary-meta"> — biology • biology</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Neuroscience quiz competition for high-school students testing knowledge and clinical understanding.</p>
+              <p><a href="https://www.thebrainbee.org" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="academics" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🏅 Science Olympiads</span>
+              <span class="summary-meta"> — academics • science</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Structured academic team competitions with theory, lab, and problem-solving events across multiple disciplines.</p>
+              <p><a href="https://www.imo-official.org" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="robotics" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🤖 World Robot Olympiad (WRO)</span>
+              <span class="summary-meta"> — stem • robotics</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>International robotics competition with thematic robot challenges using LEGO and other platforms.</p>
+              <p><a href="https://www.wro-association.org" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="environmental" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🏆 Genius Olympiad</span>
+              <span class="summary-meta"> — environmental • science</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Project-based high-school competition focused on environmental sustainability and research.</p>
+              <p><a href="https://www.geniusschool.org/olympiad" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="engineering" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">⚡ I-SWEEP (International Sustainable World Energy, Engineering, Environmental)</span>
+              <span class="summary-meta"> — stem • engineering</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Global student project competition focused on sustainability and engineering solutions.</p>
+              <p><a href="https://www.isweep.org" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="cs" data-subject="cs" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">💻 Facebook / Meta Hacker Cup</span>
+              <span class="summary-meta"> — cs • cs</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Global algorithmic coding contest hosted by Meta featuring competitive programming challenges.</p>
+              <p><a href="https://www.facebook.com/codingcompetitions/hacker-cup/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="engineering" data-subject="engineering" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🌊 ROV (MATE ROV Competition)</span>
+              <span class="summary-meta"> — engineering • engineering</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Underwater remotely operated vehicle design & mission competition with marine engineering focus.</p>
+              <p><a href="https://www.matecenter.org/rov-competition/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="robotics" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🦾 FIRST LEGO League (FLL)</span>
+              <span class="summary-meta"> — stem • robotics</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Hands-on LEGO robotics competition with research project and robot game components.</p>
+              <p><a href="https://www.firstlegoleague.org" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="entrepreneurship" data-subject="innovation" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🚀 Nawah Social Entrepreneurship</span>
+              <span class="summary-meta"> — entrepreneurship • innovation</span>
+            </summary>
+            <div class="mat-details">
+              <p>Egyptian initiative supporting youth social-impact projects and startups.</p>
+              <p><a href="https://nawahresearch.com" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="technology" data-subject="cs" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🎮 Microsoft Imagine Cup</span>
+              <span class="summary-meta"> — technology • cs</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Microsoft's global student tech competition featuring apps, AI, and game development.</p>
+              <p><a href="https://imaginecup.microsoft.com" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="literacy" data-subject="english" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">📚 Arab Reading Challenge</span>
+              <span class="summary-meta"> — literacy • english</span>
+            </summary>
+            <div class="mat-details">
+              <p>Regional reading competition promoting reading culture across Arab schools.</p>
+              <p><a href="https://www.arabreadingchallenge.com" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="robotics" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🤖 VEX Robotics Competitions</span>
+              <span class="summary-meta"> — stem • robotics</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Robotics competition system for school teams featuring VEX IQ and VRC platforms.</p>
+              <p><a href="https://www.vexrobotics.com" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="platform" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🔬 Google Scholar</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Scholarly search engine indexing articles, theses, books, and court opinions across disciplines.</p>
+              <p><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Search Now</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="platform" data-category="research" data-subject="biology" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">📖 PubMed / PubMed Central</span>
+              <span class="summary-meta"> — research • biology</span>
+            </summary>
+            <div class="mat-details">
+              <p>Searchable database of biomedical literature maintained by NIH and National Library of Medicine.</p>
+              <p><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener noreferrer">Search Now</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="platform" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🌐 CORE</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Aggregator of open-access research papers and repositories across disciplines.</p>
+              <p><a href="https://core.ac.uk" target="_blank" rel="noopener noreferrer">Search Now</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="platform" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🔍 ScienceOpen</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Research discovery and open peer-review platform for academic collaboration.</p>
+              <p><a href="https://www.scienceopen.com" target="_blank" rel="noopener noreferrer">Explore</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="platform" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">👥 Academia.edu</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Social network for researchers to share papers and follow topics of interest.</p>
+              <p><a href="https://www.academia.edu" target="_blank" rel="noopener noreferrer">Join Now</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="platform" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🤝 ResearchGate</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Professional network for scientists to share publications and engage in Q&A.</p>
+              <p><a href="https://www.researchgate.net" target="_blank" rel="noopener noreferrer">Join Now</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="publisher" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">📰 Nature</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Publisher of Nature and specialist journals covering multidisciplinary science.</p>
+              <p><a href="https://www.nature.com" target="_blank" rel="noopener noreferrer">Visit</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="platform" data-category="research" data-subject="biology" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🗂️ Europe PMC</span>
+              <span class="summary-meta"> — research • biology</span>
+            </summary>
+            <div class="mat-details">
+              <p>European repository and index for life sciences and biomedical literature.</p>
+              <p><a href="https://europepmc.org" target="_blank" rel="noopener noreferrer">Search Now</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="repository" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">📑 arXiv</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Major open preprint server for physics, math, computer science, and related disciplines.</p>
+              <p><a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">Browse</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="repository" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🔧 viXra</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Alternative preprint server accepting submissions without traditional arXiv moderation.</p>
+              <p><a href="https://vixra.org" target="_blank" rel="noopener noreferrer">Browse</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="entrepreneurship" data-subject="innovation" data-available="false">
+            <summary class="mat-summary">
+              <span class="title-wrap">🔬 Google Science Fair</span>
+              <span class="summary-meta"> — entrepreneurship • innovation</span>
+            </summary>
+            <div class="mat-details">
+              <p>Global online youth science competition (ran 2011–2018; currently discontinued).</p>
+              <p><a href="https://en.wikipedia.org/wiki/Google_Science_Fair" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🔭 Ebn El Haytham (Ibn al-Haytham)</span>
+              <span class="summary-meta"> — stem • science</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Youth competition named after Ibn al-Haytham; structure varies by country and organizer.</p>
+              <p><a href="#" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="environmental" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">♻️ Trash to Cash</span>
+              <span class="summary-meta"> — environmental • science</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Competitions and programs that upcycle waste into products or business models (local variants).</p>
+              <p><a href="#" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="stem" data-subject="robotics" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🎯 Elalameen for Robots</span>
+              <span class="summary-meta"> — stem • robotics</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Regional robotics competition in Egypt with engineering and CS focus.</p>
+              <p><a href="#" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="stem" data-subject="cs" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">💻 EOI + ECPC Teens</span>
+              <span class="summary-meta"> — stem • cs</span>
+            </summary>
+            <div class="mat-details">
+              <p>Youth coding and problem-solving programs focused on competitive programming.</p>
+              <p><a href="#" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="stem" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🔬 NU Research</span>
+              <span class="summary-meta"> — stem • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>University research programs for students (e.g., Nile University in Egypt).</p>
+              <p><a href="https://www.nileuniversity.edu.eg" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="innovation" data-subject="innovation" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">💡 SIC (Student Innovation Competition)</span>
+              <span class="summary-meta"> — innovation • innovation</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Student innovation contests across multiple countries and regions with various focuses.</p>
+              <p><a href="#" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="entrepreneurship" data-subject="innovation" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🚀 Model Entrepreneur</span>
+              <span class="summary-meta"> — entrepreneurship • innovation</span>
+            </summary>
+            <div class="mat-details">
+              <p>Startup and entrepreneurship challenges for students with local or regional variants.</p>
+              <p><a href="#" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="entrepreneurship" data-subject="innovation" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🏢 MIT Arab Startup Competition</span>
+              <span class="summary-meta"> — entrepreneurship • innovation</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Startup pitch competition for Arab entrepreneurs (editions vary year to year).</p>
+              <p><a href="#" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="robotics" data-subject="robotics" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🤖 Robot Challenge</span>
+              <span class="summary-meta"> — robotics • robotics</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Robotics contest series with regional and global editions (e.g., Robot Challenge Austria).</p>
+              <p><a href="https://www.robotchallenge.org" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="platform" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">📖 ScienceDirect (Elsevier)</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Elsevier's journal and article platform with mostly paywalled content (institutional access common).</p>
+              <p><a href="https://www.sciencedirect.com" target="_blank" rel="noopener noreferrer">Browse</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="session" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🎓 Harvard Paper Chase</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Harvard library-run research and citation challenges for developing research skills.</p>
+              <p><a href="#" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="research" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">📚 Pioneer Academics</span>
+              <span class="summary-meta"> — research • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>College-accredited online research program pairing students 1:1 with PhD mentors to conduct original research; optional college credit.</p>
+              <p><a href="https://pioneeracademics.com/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="academics" data-subject="english" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">✍️ Lumiere Scholars (Essay Awards)</span>
+              <span class="summary-meta"> — academics • english</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Essay and research mentorship competitions offering scholarships, mentorship and awards across multiple disciplines.</p>
+              <p><a href="https://www.lumiere-education.com/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="stem" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🎯 Yale Young Global Scholars (YYGS)</span>
+              <span class="summary-meta"> — stem • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Intensive short programs at Yale bringing high-achieving students together for seminars, labs, and mentorship across multiple thematic tracks.</p>
+              <p><a href="https://globalscholars.yale.edu/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="program" data-category="stem" data-subject="science" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🌍 Yale Young African Scholars (YYAS)</span>
+              <span class="summary-meta"> — stem • science</span>
+            </summary>
+            <div class="mat-details">
+              <p>Scholarship and leadership program hosted by Yale to prepare outstanding African students for higher education and leadership roles.</p>
+              <p><a href="https://africanscholars.yale.edu/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="biology" data-subject="biology" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🧬 Asian Biology Bowl</span>
+              <span class="summary-meta"> — biology • biology</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Regional edition of the Biology Bowl — buzzer and quiz style team competition focused on biology knowledge and reasoning.</p>
+              <p><a href="https://biologybowl.org/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="biology" data-subject="biology" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🧬 American Biology Bowl (USA Biology Bowl)</span>
+              <span class="summary-meta"> — biology • biology</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Team quiz-format biology competition with regional and national rounds, organized alongside International Biology Bowl events.</p>
+              <p><a href="https://biologybowl.org/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+
+          <details class="material" data-type="competition" data-category="entrepreneurship" data-subject="innovation" data-available="true">
+            <summary class="mat-summary">
+              <span class="title-wrap">🏆 Anzisha Prize</span>
+              <span class="summary-meta"> — entrepreneurship • innovation</span>
+              <span class="avail-label">Available</span>
+            </summary>
+            <div class="mat-details">
+              <p>Pan-African prize and fellowship supporting young entrepreneurs with seed funding, mentorship, and networking to scale ventures.</p>
+              <p><a href="https://anzisha.org/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
+            </div>
+          </details>
+        </div>
+
+        <div id="no-results" class="hidden">No opportunities match your filters.</div>
+
+      </div>
+    </section>
+
+    <footer class="footer">&copy; 2025 ThinkLab Academy | All Rights Reserved</footer>
+  </div>
+
+  <script src="opportunities.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ThinkLab Academy — Contact Us</title>
+<link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <div class="header-inner" role="banner">
+        <a href="index.html" aria-label="ThinkLab Academy home">
+          <img src="Logo.png" alt="ThinkLab Academy logo" class="logo" />
+        </a>
+        <div class="site-brand" aria-hidden="false">
+          <div class="brand-title">ThinkLab Academy</div>
+          <div class="brand-sub">Lighting the Path to a Sustainable Future</div>
+        </div>
+        <nav aria-label="Main" class="site-nav">
+          <a class="nav-link" href="videos.html">Videos</a>
+          <a class="nav-link" href="materials.html">Materials</a>
+          <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- left: contact form -->
+        <section class="card reveal" aria-labelledby="contactTitle">
+          <h2 id="contactTitle" style="margin:0 0 8px;color:var(--gold)">Contact Us</h2>
+          <p class="lead">Have a question, suggestion or partnership idea? Send us a message — we’ll get back within 48 hours.</p>
+
+          <form action="#" class="contact-form" id="contactForm" novalidate>
+            <div class="row">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" inputmode="text" autocomplete="name" placeholder="Your full name" required />
+                <small class="hint" aria-hidden="true" style="color:rgba(255,255,255,0.6)">Who should we address?</small>
+              </div>
+
+   
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="yourname@example.com" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+20 10 1234 5678" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Short summary" required />
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write your question or message..." required></textarea>
+            </div>
+
+            <div class="field">
+              <label>Attachment (optional)</label>
+              <div class="file-wrap" aria-hidden="false">
+                <label class="file-label" for="fileInput">Choose file</label>
+                <input id="fileInput" name="file" type="file" accept=".pdf,.doc,.docx,.png,.jpg" style="display:none" />
+                <div class="file-name" id="fileName">No file chosen</div>
+              </div>
+            </div>
+
+            <!-- hidden helpful Formspree fields (optional) -->
+            <input type="hidden" name="_subject" value="ThinkLab Contact Form: New message from website" />
+            <!-- _replyto will let Formspree know which email to reply to (it uses the email field by default) -->
+            <input type="hidden" name="_replyto" value="" />
+
+            <div class="actions">
+              <button type="submit" class="btn">Send message</button>
+              <button type="reset" class="btn btn-ghost">Reset</button>
+              <div id="formFeedback" role="status" class="feedback" aria-live="polite"></div>
+            </div>
+
+            <p style="margin-top:10px;color:rgba(255,255,255,0.6);font-size:0.9rem">
+              By sending you agree to be contacted by ThinkLab Academy. For production, replace the placeholder action with your server or keep using Formspree.
+            </p>
+          </form>
+        </section>
+
+        <!-- right: info & map -->
+        <aside class="info">
+          <div class="card contact-info reveal">
+            <h3 style="margin:0 0 8px;color:var(--gold)">Contact information</h3>
+            <div class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8V7a2 2 0 0 0-2-2h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <div class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92V21a1 1 0 0 1-1.09 1A19 19 0 0 1 3 5.09 1 1 0 0 1 4 4h4.09a1 1 0 0 1 1 .75c.12.68.36 1.84.9 3.05a1 1 0 0 1-.24 1.02L8.21 12.79a16 16 0 0 0 6.99 6.99l2.97-1.54a1 1 0 0 1 1.02-.24c1.2.54 2.37.78 3.05.9a1 1 0 0 1 .75 1V21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div>
+                <div class="meta">Phone</div>
+                <div>+20 102 919 8848</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div>
+                <div class="meta">Email</div>
+                <div><a href="eyad.2124017@stemobour.moe.edu.eg"></a>eyad.2124017@stemobour.moe.edu.eg</div>
+              </div>
+            </div>
+          </div>
+
+    </main>
+
+    <footer class="footer">
+      &copy; 2025 ThinkLab Academy | All Rights Reserved
+    </footer>
+  </div>
+<script src="contact.js"></script>
+</body>
+</html>
