@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThinkLab Academy - Videos</title>
+  <link rel="stylesheet" href="videos.css" />
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <a href="index.html"><img src="Logo.png" alt="ThinkLab Academy Logo" class="logo" /></a>
+      <h1 class="title">Videos</h1>
+    </header>
+
+    <section class="materials-section">
+      <div class="container">
+
+        <div class="filters-row" aria-label="Filters">
+          <!-- Education System Filter -->
+          <div class="filter-group filter-education">
+            <label for="filter-education" class="filter-label">Education System</label>
+            <select id="filter-education" class="filter-select" aria-label="Filter by Education System">
+              <option value="all">All Systems</option>
+              <option value="secondary">Secondary</option>
+              <option value="stem">STEM</option>
+              <option value="stemseeker">STEM Seeker</option>
+            </select>
+          </div>
+
+          <!-- Grade Filter -->
+          <div class="filter-group filter-grade" id="grade-filter-group" style="display:none;">
+            <label for="filter-grade" class="filter-label">Grade</label>
+            <select id="filter-grade" class="filter-select" aria-label="Filter by Grade"></select>
+          </div>
+
+          <!-- Subject Filter -->
+          <div class="filter-group filter-subject" id="subject-filter-group" style="display:none;">
+            <label for="filter-subject" class="filter-label">Subject</label>
+            <select id="filter-subject" class="filter-select" aria-label="Filter by Subject"></select>
+          </div>
+
+          <!-- Semester Filter -->
+          <div class="filter-group filter-semester" id="semester-filter-group" style="display:none;">
+            <label for="filter-semester" class="filter-label">Semester</label>
+            <select id="filter-semester" class="filter-select" aria-label="Filter by Semester"></select>
+          </div>
+
+          <div class="counts-inline" aria-hidden="true">
+            <div class="count-badge">Visible: <span id="count-visible">0</span></div>
+            <div class="count-badge">Total: <span id="count-total">0</span></div>
+          </div>
+        </div>
+
+        <div class="search-row">
+          <input id="search-input" type="search" placeholder="Search videos (title or content)" class="search-input" />
+        </div>
+
+        <div id="materials-list">
+          <!-- STEM SEEKER COURSES -->
+          <div class="lesson" data-education="stemseeker" data-grade="all" data-subject="scholarships" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Scholarships and Competitions
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHk-jgGVcosDYVQ7Kuhi1kZB" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="stemseeker" data-grade="all" data-subject="science" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Science Course for STEM Seekers
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHnMrKXbbEVCZYno50BWcx2q" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="stemseeker" data-grade="all" data-subject="english" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              English Course for STEM Seekers
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHmCV3GbycB0HztchuzPmc6Z" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="stemseeker" data-grade="all" data-subject="math" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Math Course for STEM Seekers
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHl2XUB4JrIBK81nk6FH1xN9" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="stemseeker" data-grade="all" data-subject="iq" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              IQ Course for STEM Seekers
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHlEhfpEtbiXmxTJwiPC4rmY" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECONDARY EDUCATION - GRADE 10 SEMESTER 1 -->
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="revisions" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              Grade 10 Revisions Semester 1
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHnYw_NwRVFzZ9soauGY7kSc" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="biology" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              Biology Grade 10 Semester 1
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHkb8A153S_wYOS1Irhvs30_" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="geology" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              Geology Grade 10 Semester 1
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHkUC7FgQNY4lIo3_tmc4tmF" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="chemistry" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              Chemistry Grade 10 Semester 1
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHkPwj8bYzkhTsPpDoY9tcXg" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="physics" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              Physics Grade 10 Semester 1
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHnKbqRNHnCOQ7kEyaclTj6H" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="mechanics" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              Mechanics Grade 10 Semester 1
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHl6BVWy_3J8G-MjbiOwdGdD" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECONDARY EDUCATION - GRADE 10 SEMESTER 2 -->
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="revisions" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              Grade 10 Semester 2 Midterm Revisions
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHnPWslujQGS1U4O_tZmKPiV" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="english" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              English 1st Secondary Semester 2
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHldEz4i4A9WH89B2krWLL4d" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="french" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              French Grade 10 Semester 2
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHnn1ju2xsJnzIDLgwHPIvhO" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="geology" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              Geology Grade 10 Semester 2
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHklf972WApuwo6z7POEMsUp" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="physics" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              Physics Grade 10 Semester 2
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHnqfk4swlEogl3JW616iD4V" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="math" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              Math 1st Secondary Semester 2
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHnW12roTFRYfFUvUZ-G62w1" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="chemistry" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              Chemistry Grade 10 Semester 2
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHm7g3Dq7Nfu4pRBZnSfKgTM" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="mechanics" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              Mechanics Grade 10 Semester 2
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHkFo0ukIP_e4xWnEjIn8JQb" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="secondary" data-grade="g10" data-subject="biology" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              Biology Grade 10 Semester 2
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHlUA6r9D-tGMp6dmTypHASN" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEM EDUCATION - GRADE 10 SEMESTER 2 -->
+          <div class="lesson" data-education="stem" data-grade="g10" data-subject="english" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              English Grade 10 Semester 2 STEM
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHlyAiTMlFsITl41N3i1qft1" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-education="stem" data-grade="g10" data-subject="math" data-semester="s2">
+            <div class="lesson-header" tabindex="0">
+              Math Grade 10 Semester 2 STEM
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <a href="https://www.youtube.com/playlist?list=PL7KhftuwSLHm3iTCv6TwQNuSBHkTVCACR" target="_blank" rel="noopener noreferrer">Watch Playlist</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 ThinkLab Academy | All Rights Reserved
+    </footer>
+  </div>
+
+  <script src="videos.js"></script>
+</body>
+</html>

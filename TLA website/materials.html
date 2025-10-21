@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThinkLab Academy - Materials</title>
+  <link rel="stylesheet" href="materials.css" />
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <a href="index.html"><img src="Logo.png" alt="ThinkLab Academy Logo" class="logo" /></a>
+      <h1 class="title">Materials</h1>
+    </header>
+
+    <section class="materials-section">
+      <div class="container">
+        <div class="filters-row" aria-label="Filters">
+          <!-- Material Type Filter -->
+          <div class="filter-group filter-type">
+            <label for="filter-type" class="filter-label">Material Type</label>
+            <select id="filter-type" class="filter-select" aria-label="Filter by Material Type">
+              <option value="all">All Types</option>
+              <option value="study">Study Materials</option>
+              <option value="sat">SAT</option>
+              <option value="act">ACT</option>
+              <option value="capstone">Capstone</option>
+            </select>
+          </div>
+
+          <!-- Subject Filter (hidden by default, shown for Study Materials) -->
+          <div class="filter-group filter-subject" id="subject-filter-group" style="display:none;">
+            <label for="filter-subject" class="filter-label">Subject</label>
+            <select id="filter-subject" class="filter-select" aria-label="Filter by Subject"></select>
+          </div>
+
+          <!-- Grade Filter (hidden by default) -->
+          <div class="filter-group filter-grade" id="grade-filter-group" style="display:none;">
+            <label for="filter-grade" class="filter-label">Grade</label>
+            <select id="filter-grade" class="filter-select" aria-label="Filter by Grade"></select>
+          </div>
+
+          <!-- Semester Filter (hidden by default) -->
+          <div class="filter-group filter-semester" id="semester-filter-group" style="display:none;">
+            <label for="filter-semester" class="filter-label">Semester</label>
+            <select id="filter-semester" class="filter-select" aria-label="Filter by Semester"></select>
+          </div>
+
+          <div class="counts-inline" aria-hidden="true">
+            <div class="count-badge">Visible: <span id="count-visible">0</span></div>
+            <div class="count-badge">Total: <span id="count-total">0</span></div>
+          </div>
+        </div>
+
+        <div class="search-row">
+          <input id="search-input" type="search" placeholder="Search lessons (title or content)" class="search-input" />
+        </div>
+
+        <div id="materials-list">
+          <!-- STUDY MATERIALS - BIOLOGY SECTION -->
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Biology References
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Reference 1","id":"1H3EaOpJzCOkJV-_Nu8r-tBLsGQ_59U6b"},{"name":"Reference 2","id":"1Wti37OCEzyiD64cH19E4kpYjpHWXoI1-"},{"name":"Reference 3","id":"1BRdX_15OImwo7vVRExDrKOEDZkR9uDXs"},{"name":"Reference 4","id":"1Zx1N7NM7lkeMUEkpLvVSlgsl43yio9IC"},{"name":"Reference 5","id":"1WOLR_rsGEWeugV3-h00Zy6JMxE_uSFb0"},{"name":"Reference 6","id":"1n8NdraFN3CP-wCK2hT_qdPYvkP2Dg9ua"},{"name":"Reference 7","id":"1b-cT1WoKgNuUkwUOwgHLbOYaVrvA-yzo"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Biology Old Exams
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Exam 1","id":"1tDE39CMgckGRNv_Fjtiuwxsfr-5Wtxk4"},{"name":"Exam 2","id":"1P6OMDRW2SlILVhAlOqLSttoUjg84vZDJ"},{"name":"Exam 3","id":"1TPdhpiKH2SC9l8G0SK3Al25z3x4syXSa"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 1 (Grade 10 Biology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Lecture Materials","id":"1CcJpBTCbF06LmbalMMTAC9BS6CDgPLCQ"},{"name":"Practice Questions","id":"1tqv3zkWQccMEZnwpcWTtGdOZMMmgz7c8"},{"name":"Video (Malaria&Diseases pt.1)","id":"Pn7OD8W6yyc","type":"youtube"},{"name":"Video (Malaria&Diseases pt.2)","id":"jl9gf_x0yFc","type":"youtube"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 2 (Grade 10 Biology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Lecture Materials","id":"1OVGahKRpGKqj0YakTVQO7Se5iMyZWxza"},{"name":"Practice Questions","id":"1r-h9V-RWX715BKGqZmxLCJ16NkVS_qrj"},{"name":"Video (SC&Cell structure)","id":"OJcX8_Qvv58","type":"youtube"},{"name":"Video (Cell structure&function)","id":"OJcX8_Qvv58","type":"youtube"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 3 (Grade 10 Biology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Video Lecture","id":"zKvxXOfi38I","type":"youtube"},{"name":"Practice Questions","id":"1nGBKnxJXn68EVIdITwy5tTRrT1bDYkcw"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 4 (Grade 10 Biology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Video Lecture","id":"HfV0Pb0bmLo","type":"youtube"},{"name":"Lecture Materials","id":"1SbzDnHzUwGCdNwMQq2C1OXeoizy6ugIK"},{"name":"Practice Questions","id":"1AA9MuQRHENlz-fck-_7rbrViGcH4xWLN"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 5 (Grade 10 Biology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Video Lecture","id":"BhqYd5bu3cU","type":"youtube"},{"name":"Lecture Materials","id":"1ZY4OUG0hddijP4XmrGN7R-DyxkIs2wAv"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 6 (Grade 10 Biology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Video Lecture","id":"3YcVvmEJvVw","type":"youtube"},{"name":"Lecture Materials","id":"11aLRF7p89OS28jk_TAb5ni6xvZ_Gxbp1"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 7 (Grade 10 Biology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Lecture Materials","id":"1EXJ-QM7t13Q08RvbLkgaWlltJhEbT_uE"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="biology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 8 (Grade 10 Biology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Lecture Materials","id":"13TEbcfdeNIRKtySCNjwQ3EvSjlAXr0Jw"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STUDY MATERIALS - CHEMISTRY SECTION -->
+          <div class="lesson" data-type="study" data-subject="chemistry" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Chemistry References
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Reference 1","id":"1HYdCVUX6tudm-VPIACwjTz4WgD2YYykW"},{"name":"Reference 2","id":"1IKlCVlkJz32CC24nB05OoZiA_9www9RT"},{"name":"Reference 3","id":"14dnQieBeFe0MgDvMj2FOmhuYMt_rXD5z"},{"name":"Reference 4","id":"1P2iUXj1hOSPTXzxbpynrPaujaQfvJiRQ"},{"name":"Reference 5","id":"1kCwawLnoOL09XXS2Ojc_MS4oq_fikMh5"},{"name":"Reference 6","id":"1brvohypX7hur4Pd1ppcf-qBJMpPoyz8u"},{"name":"Reference 7","id":"1Q3pvvHJGPlDBEhrYmvLLYmT5mfi4ozbK"},{"name":"Reference 8","id":"10TCYLSxFgxxqXKFL-0no9Cj-txgGoZDF"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="chemistry" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Chemistry Old Exams
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Old Exams","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="chemistry" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 1 (Grade 10 Chemistry, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="chemistry" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 2 (Grade 10 Chemistry, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="chemistry" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 3 (Grade 10 Chemistry, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="chemistry" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 4 (Grade 10 Chemistry, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="chemistry" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 5 (Grade 10 Chemistry, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="chemistry" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 6 (Grade 10 Chemistry, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="chemistry" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 7 (Grade 10 Chemistry, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STUDY MATERIALS - PHYSICS SECTION -->
+          <div class="lesson" data-type="study" data-subject="physics" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Physics References
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"References","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="physics" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Physics Old Exams
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Exam 1","id":"1xPSpvt6w4i7rVCgkOdX0OkuFc_IKUmvd"},{"name":"Exam 2","id":"18OkaJ3EPYje73JIeR07Z4GuZZgEQxhnP"},{"name":"Exam 3","id":"13R_QK2izCaVEIFUoxnvbL7BdFye3CksA"},{"name":"Exam 4","id":"1esu0bwJPJ4ffchPBh6zvEIv6HlE-pqw8"},{"name":"Exam 5","id":"1InJX7dXcSTNyq0-yvYxbrUb8d49ZuDQ4"},{"name":"Exam 6","id":"1cpQPi8vfcobYu7BJcVrPZ_5Xu75kWRzI"},{"name":"Exam 7","id":"1U08a2HzNx5zY50KBY5sYzpqCSe04sCxY"},{"name":"Exam 8","id":"1qY0QtoC_qsMcn2nIwS4N-U24X0J1707L"},{"name":"Exam 9","id":"1miDO0Ye_rOPFKbGs2667i6xy-7Spoq4o"},{"name":"Exam 10","id":"1QAmURVlO8azXCWnkJ2sQxtmSDzNKojOk"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="physics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 1 (Grade 10 Physics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="physics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 2 (Grade 10 Physics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="physics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 3 (Grade 10 Physics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="physics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 4 (Grade 10 Physics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="physics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 5 (Grade 10 Physics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="physics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 6 (Grade 10 Physics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="physics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 7 (Grade 10 Physics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STUDY MATERIALS - GEOLOGY SECTION -->
+          <div class="lesson" data-type="study" data-subject="geology" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Geology References
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Reference 1","id":"13AZnD0JI5H-D-mHZObmj52UKifyPoUHm"},{"name":"Reference 2","id":"1Rrh8_I5L03RmeTkYyAizik6-ejaXh-Aj"},{"name":"Reference 3","id":"19aWOBeX6JRosTxkIMlqUVtxOxxbT2XYl"},{"name":"Reference 4","id":"13zvQzxSKXvVETtD7liVJpU7dK6Qg3cdn"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="geology" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Geology Old Exams
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Exam 1","id":"1wrprTEw-qEFFdiqj5CMDe6Y9AP10ML2D"},{"name":"Exam 2","id":"1oqQBonkSWoG92vDlzSvGXY4V9oo_t5un"},{"name":"Exam 3","id":"1pq8ykHFVdVJI20rxLdXXYI9a1RQCPSE_"},{"name":"Exam 4","id":"1waFHDiWK4UsTU23N-lwEYTUm4fO9VafS"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="geology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 1 (Grade 10 Geology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Material 1","id":"1OCRaIJFQmltJOdx7J0ucnBSHhQDmF9PE"},{"name":"Material 2","id":"1wermps4kyWck5XQ0wPDkqUMzhroZlLeh"},{"name":"Material 3","id":"1WIWEen-4tcLQcjH5Zls-jzM1jMlO2aVC"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="geology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 2 (Grade 10 Geology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"16v-Imo7h7i4CAgm4J0PyruNUDTbguGlU"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="geology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 3 (Grade 10 Geology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Material 1","id":"17Fxyxl0QniJPEwyH6yDNAtJyHYRLaWbX"},{"name":"Material 2","id":"1_iVY1cipIWHiBn7tJlGT9HwKGF_Yd6O6"},{"name":"Material 3","id":"11vpLO3bX22hFTs260fnvturHtiuUNi9u"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="geology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 4 (Grade 10 Geology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"1or9KVjMfCx5isq-ik6Ks3odnY_p9ED9q"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="geology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 5 (Grade 10 Geology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"12lecCeRt9V8xUnFNBm7EK7WU3sVCwP0p"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="geology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 6 (Grade 10 Geology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"1l3O_ypI6_aDcdWHmRd0lqwqqs2Bh0eKR"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="geology" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 7 (Grade 10 Geology, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STUDY MATERIALS - MATH SECTION -->
+          <div class="lesson" data-type="study" data-subject="math" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Math References
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"References","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="math" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Math Old Exams
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Exam 1","id":"12IKnBEXJjVsaINPE-IQji_Ff6XIfkJ16"},{"name":"Exam 2","id":"163p3AatChy47cW_qkRiqVsIybaHsrQ5o"},{"name":"Exam 3","id":"1L4cLkpeQlZNYM9Z_UssEHGo5j0bRPdag"},{"name":"Exam 4","id":"1dO98RNLHhd5HPAozt-qlO--drjnRuKyB"},{"name":"Exam 5","id":"1dsQzUkscuW28uEkbPTVBQp92c7kPMs2-"},{"name":"Exam 6","id":"1kSHd53U-w_HB-B9OnWoVIG2UjhOLpxxW"},{"name":"Exam 7","id":"1WHEelB0f-v7qZwVgmfMXdn7XVRxbpQuj"},{"name":"Exam 8","id":"1K1Sc18SQ4gpcRmthwUd1c8o7b7ZKZQdH"},{"name":"Exam 9","id":"1DLTkGv-5UoL684R7ZVfAn9biaVSFXxpQ"},{"name":"Exam 10","id":"12IifdCVddkIH4I0HzPZ0v5QWNwVdThmw"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="math" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 1 (Grade 10 Math, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="math" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 2 (Grade 10 Math, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="math" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 3 (Grade 10 Math, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="math" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 4 (Grade 10 Math, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="math" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 5 (Grade 10 Math, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="math" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 6 (Grade 10 Math, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STUDY MATERIALS - MECHANICS SECTION -->
+          <div class="lesson" data-type="study" data-subject="mechanics" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Mechanics References
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Reference 1","id":"1X3bsqFIzvez9LDmyoC7hwLNq8l-h18Op"},{"name":"Reference 2","id":"1jKuiDmXm32TSbNZlOeEDG96n7lzMoOhL"},{"name":"Reference 3","id":"15JCW1nwPb_nAlbrubVsbrkOip6Dx1Jlx"},{"name":"Reference 4","id":"1gu2pib_KpulTjfHah1viy_cmr9A59vbd"},{"name":"Reference 5","id":"12f0U5QfFHxGHO5x-aF2bTEAW_JnL-Xxe"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="mechanics" data-grade="all" data-semester="all">
+            <div class="lesson-header" tabindex="0">
+              Mechanics Old Exams
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Exam 1","id":"1u4VPCCevwpquds5c6-6P8CgVCqbtb5xi"},{"name":"Exam 2","id":"1332F0MoTjGCrUmGPdI83aatoXHRqSvRA"},{"name":"Exam 3","id":"1Csq2yYc0Y0ah91NesGR2wpjFXxYWvrEh"},{"name":"Exam 4","id":"1n8w3HCUAV-fwZmdBeIPupifFc9aeF7_H"},{"name":"Exam 5","id":"18hb6B1kCYB3WZGPK8b5IVYmwi_h3AKGY"},{"name":"Exam 6","id":"1w2j-OTcj-7G3-5na1gf0jTC1vTqWAg8n"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="mechanics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 1 (Grade 10 Mechanics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="mechanics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 2 (Grade 10 Mechanics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="mechanics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 3 (Grade 10 Mechanics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson" data-type="study" data-subject="mechanics" data-grade="g10" data-semester="s1">
+            <div class="lesson-header" tabindex="0">
+              L.O 4 (Grade 10 Mechanics, Semester 1)
+              <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-materials">
+              <div class="material">
+                <button class="material-button" data-files='[{"name":"Materials","id":"EXAMPLE_ID"}]'>
+                  View Materials
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SAT SECTION (Empty) -->
+          <!-- ACT SECTION (Empty) -->
+          <!-- CAPSTONE SECTION (Empty) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Viewer -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title" id="modal-title">Document Viewer</div>
+          <div class="modal-controls">
+            <a id="download-btn" class="modal-btn" download>⬇ Download</a>
+            <button class="modal-btn close-btn" id="close-modal">✕</button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div id="file-tabs" class="file-tabs"></div>
+          <div class="viewer-container">
+            <div class="loading" id="loading">Loading document...</div>
+            <iframe id="document-viewer" style="display:none;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      &copy; 2025 ThinkLab Academy | All Rights Reserved
+    </footer>
+  </div>
+  <script src="materials.js"></script>
+</body>
+</html>
