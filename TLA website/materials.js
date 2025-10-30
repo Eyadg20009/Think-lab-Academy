@@ -1,5 +1,5 @@
 const FILTER_OPTIONS = {
-  materialTypes: ['all', 'study', 'sat', 'act', 'capstone'],
+  materialTypes: ['all', 'study', 'sat', 'act', 'ielts', 'capstone'],
   subjects: ['all', 'math', 'mechanics', 'biology', 'geology', 'physics', 'chemistry', 'english', 'french'],
   grades: ['all', 'g10', 'g11', 'others'],
   semesters: ['all', 's1', 's2']
@@ -34,6 +34,8 @@ function populateSelect(id, options) {
       el.textContent = 'SAT';
     } else if (opt === 'act') {
       el.textContent = 'ACT';
+    } else if (opt === 'ielts') {
+      el.textContent = 'IELTS';
     } else if (opt === 'capstone') {
       el.textContent = 'Capstone';
     } else {
@@ -68,7 +70,7 @@ function updateFilterVisibility() {
     gradeGroup.style.display = 'flex';
     semesterGroup.style.display = 'flex';
   }
-  // SAT and ACT don't need additional filters
+  // SAT, ACT, and IELTS don't need additional filters
 
   // Reset select values
   document.getElementById('filter-subject').value = 'all';
