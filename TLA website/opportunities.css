@@ -1,3 +1,4 @@
+
 :root {
   --dark-blue: #193559;
   --gold: #cbb27b;
@@ -7,7 +8,123 @@
   --card-width: 600px;
   --light-blue: #4a6fa5;
 }
+/* Alert Banner */
+    .alert-banner {
+      background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+      color: white;
+      padding: 20px 0;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(196, 30, 58, 0.4);
+      overflow: hidden;
+      animation: slideDown 0.5s ease;
+    }
 
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .alert-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .alert-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+      gap: 20px;
+    }
+
+    .alert-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .alert-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: var(--gold);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      letter-spacing: 1px;
+    }
+
+    .alert-description {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .alert-sponsor {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-style: italic;
+    }
+
+    .alert-close {
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .alert-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(90deg) scale(1.1);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .alert-banner.hidden {
+      animation: slideUp 0.5s ease forwards;
+    }
+
+    @keyframes slideUp {
+      to {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+    }
+
+    /* Header */
+    .site-header {
+      background: var(--dark-blue);
+      border-bottom: 4px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
 /* base */
 * { 
   box-sizing: border-box; 
